@@ -164,6 +164,49 @@ def testTupla():
     print(len(elementos)) #Mostra o tamanho da tupla
     print(elementos[0]) #Mostra o primeiro elemento da tupla
 
+def testString():
+    frase = "Meu nome é Lucas"
+    email = "lucas@gmail.com"
+    print(frase.split()) #Mostra a frase separada por espaço
+    posicao = email.find('@') #Mostra a posição do @
+    print(posicao) #Mostra a posição do @
+    usuario = email[0:posicao] #Mostra o usuario
+    dominio = email[posicao+1:] #Mostra o dominio
+    print(f'Usuario: {usuario} Dominio: {dominio}') #Mostra o usuario e dominio
+    print(frase.upper()) #Mostra a frase em maiusculo
+    print(frase.lower()) #Mostra a frase em minusculo
+    print(frase.title()) #Mostra a frase com a primeira letra maiuscula
+    print(frase.capitalize()) #Mostra a frase com a primeira letra maiuscula
+    frase= frase.replace("Lucas", "Joao") #Substitui Lucas por Joao
+    print(frase) #Mostra a frase com a substituição
+    frase_com_espaco = "   Olá Mundo   "
+    print(frase_com_espaco.strip()) #Remove os espaços do inicio e do fim da string, também tem o lstrip() e rstrip()
+    print(frase.startswith("Meu")) #Verifica se a string começa com "Meu"
+    print(frase.endswith("Lucas")) #Verifica se a string termina com "Lucas"
+
+def DocStrings():
+    """
+    DocString é uma string de documentação que descreve o que a função faz
+    são criadas sempre usando 3 aspas.
+    São usadas em classes, funções e módulos e etc..
+    Multi Linha e respeita o formato e espaçamento do texto.
+    """
+    docstring="""DocString é uma string de documentação que descreve o que a função faz"""
+    print(docstring) #Mostra a docstring
+
+def testDicionario():
+    dicionario = {
+        "nome": "Lucas",
+        "idade": 20,
+        "altura": 1.75
+    }
+    print(dicionario) #Mostra o dicionario
+    print(dicionario["nome"]) #Mostra o valor da chave nome
+    dicionario["peso"] = 70 #Adiciona o peso ao dicionario
+    print(dicionario) #Mostra o dicionario com o peso adicionado
+    del dicionario["peso"] #Remove o peso do dicionario
+    print(dicionario) #Mostra o dicionario sem o peso
+
 # helloWord()
 # testNomeVar()
 # testInterpolacao()
