@@ -1,13 +1,6 @@
-def helloWord():
-    #This is my first python code
-    print("Hello Word")
-    nome="Lucas"
-    print("Ola " + nome) #Concatenando string com variavel
-    print("Ola " + nome + " Seja Bem Vindo") #Concatenando string com variavel
-    print("Impede de Pular Linha", end="") #Imprime na mesma linha
-    print(" Continuo na mes linha")
-    print()
-    print("Mensagem formatada pelo {0} que tem {1} anos".format(nome, 20)) #Usa o método .format() para substituir {} pelo valor de nome e 20    
+import exercicio1
+import primeiro_codigo
+import dicionarios
 
 #Variable
 def testNomeVar():
@@ -194,29 +187,29 @@ def DocStrings():
     docstring="""DocString é uma string de documentação que descreve o que a função faz"""
     print(docstring) #Mostra a docstring
 
-def testDicionario():
-    dicionario = {
-        "nome": "Lucas",
-        "idade": 20,
-        "altura": 1.75
-    }
-    print(dicionario) #Mostra o dicionario
-    print(dicionario["nome"]) #Mostra o valor da chave nome
-    dicionario["peso"] = 70 #Adiciona o peso ao dicionario
-    print(dicionario) #Mostra o dicionario com o peso adicionado
-    del dicionario["peso"] #Remove o peso do dicionario
-    print(dicionario) #Mostra o dicionario sem o peso
+opcoes = {
+     "1": lambda: exercicio1.executar(),
+     "2": lambda: primeiro_codigo.executar(),
+     "3": lambda: dicionarios.executar(),
+}
 
-# helloWord()
-# testNomeVar()
-# testInterpolacao()
-# testType()
-# testOperadores()
-# testInput()
-# testComparacao()
-# testOperadoresLogicos()
-# testFormat()
-#testRepeticao()
-#funcaoInterna()
-#testLists()
+# Loop de menu
+while True:    
+    print("\nEscolha uma opção: ")
+    print("Opções disponíveis:")
+    print("1 - exercicio1")
+    print("2 - primeiro codigo")    
+    print("3 - dicionarios")    
+    print("99 - sair\n")
+    escolha = input()
+    print()
+    
+    if escolha.lower() == "99":
+        print("Saindo...")
+        break
 
+    acao = opcoes.get(escolha)
+    if acao:
+        acao()
+    else:
+        print("Opção inválida. Tente novamente.")
