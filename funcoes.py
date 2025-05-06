@@ -7,3 +7,8 @@ def funcao_hello_word():
 
 def funcao_com_argumento(nome, email):
     print(f"Hello {nome} com email {email}")
+
+def funcao_com_parametro_opcional(numero1 = 10, numero2 = 20):
+    soma = numero1 + numero2
+    print(f"A soma é {soma}")
+    return soma
