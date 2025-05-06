@@ -14,25 +14,31 @@ import repeticoes
 import strings
 import tuplas
 import type
+import escopos
+import execoes
+import recursividade
 
 
 opcoes = {
-     "1": lambda: declaracao_variavies.executar(),
-     "2": lambda: dicionarios.executar(),
-     "3": lambda: docstring.executar(),
-     "4": lambda: exercicio1.executar(),
-     "5": lambda: funcao_interna.executar(),
-     "6": lambda: inputs.executar(),
-     "7": lambda: listas.executar(),
-     "8": lambda: matematica.executar(),
-     "9": lambda: modulos.executar(),
-     "10": lambda: operadores_logicos.executar(),
-     "11": lambda: operadores.executar(),
-     "12": lambda: primeiro_codigo.executar(),
-     "13": lambda: repeticoes.executar(),
-     "14": lambda: strings.executar(),
-     "15": lambda: tuplas.executar(),
-     "16": lambda: type.executar(),
+    "1": lambda: declaracao_variavies.executar(),
+    "2": lambda: dicionarios.executar(),
+    "3": lambda: docstring.executar(),
+    "4": lambda: exercicio1.executar(),
+    "5": lambda: funcao_interna.executar(),
+    "6": lambda: inputs.executar(),
+    "7": lambda: listas.executar(),
+    "8": lambda: matematica.executar(),
+    "9": lambda: modulos.executar(),
+    "10": lambda: operadores_logicos.executar(),
+    "11": lambda: operadores.executar(),
+    "12": lambda: primeiro_codigo.executar(),
+    "13": lambda: repeticoes.executar(),
+    "14": lambda: strings.executar(),
+    "15": lambda: tuplas.executar(),
+    "16": lambda: type.executar(),
+    "17": lambda: escopos.executar(),
+    "18": lambda: execoes.executar(),
+    "19": lambda: recursividade.executar()
 }
 
 # Loop de menu
@@ -55,6 +61,9 @@ while True:
     print("14 - Strings")
     print("15 - Tuplas")
     print("16 - Type")
+    print("17 - escopos")
+    print("18 - Exceções")
+    print("19 - Recursividade")
 
     print("99 - sair\n")
     escolha = input()

@@ -12,3 +12,9 @@ def funcao_com_parametro_opcional(numero1 = 10, numero2 = 20):
     soma = numero1 + numero2
     print(f"A soma é {soma}")
     return soma
+
+def funcao_com_parametro_nomeado(nome, email):
+    print(f"Hello {nome} com email {email}")
+    
+if __name__ == "__main__":
+    funcao_com_parametro_nomeado(nome="Lucas", email="lucas@gmail.com")
