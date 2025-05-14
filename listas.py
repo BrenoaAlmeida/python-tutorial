@@ -22,3 +22,10 @@ def executar():
     print(lista_notas) #Mostra a lista com o elemento removido
     lista_notas.insert(3, 10) #Adiciona o elemento 10 na posição 3 da lista
     print(f'Existe na lista: {13 in lista_notas}') #Verifica se o elemento 13 está na lista
+
+    #Compreensão de listas
+    numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+    lista_compreensao = [num**2 for num in numeros] #Cria uma lista com [] os elementos pares de 0 a 10
+    print(f'lista_compreensao: {lista_compreensao}') #Mostra a lista com os elementos pare
+    lista_compreensao_condicional = [num for num in numeros if num % 2 == 0] #Cria uma lista com [] os elementos pares de 0 a 10
+    print(f'lista_compreensao_condicional: {lista_compreensao_condicional}') #Mostra a lista com os elementos pares
